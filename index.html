@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YANDRAMI – Ferretería y Eléctrica</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #0d0d0d; 
+            color: #fff; 
+            scroll-behavior: smooth; 
+        }
+
+        /* Cabecera - Ajustada a BLANCO para resaltar el logo */
+        header {
+            background: #ffffff;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #ff6600;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Contenedor del Logo y Texto */
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 70px; /* Altura del logo */
+            width: auto;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            color: #000000;
+            font-weight: 700;
+            font-size: 28px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .brand-slogan {
+            color: #ff6600;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Banner Principal */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 { font-size: 3.5rem; color: #ff6600; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 25px; }
+
+        /* Secciones */
+        .section-title { text-align: center; padding: 40px 0 20px; color: #ff6600; font-size: 2rem; }
+
+        /* Categorías / Galería */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .card:hover { border-color: #ff6600; transform: translateY(-5px); }
+
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+
+        .card-content { padding: 20px; }
+        .card-content h3 { color: #ff6600; margin-bottom: 10px; }
+        .card-content p { font-size: 0.9rem; color: #ccc; }
+
+        /* Formulario */
+        .contact-area { background: #000; padding: 60px 20px; }
+        form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 15px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus { border-color: #ff6600; }
+
+        .btn-submit {
+            padding: 15px;
+            background: #ff6600;
+            color: #000;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        /* WhatsApp */
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+
+        footer { padding: 40px; text-align: center; background: #000; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-brand">
+            <img src="https://scontent.ftgz4-1.fna.fbcdn.net/v/t39.30808-6/557604704_122109886022998690_8891380271883580342_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=0b4Su-jqJQMQ7kNvwHRbfpB&_nc_oc=AdkZ7TbUfMixNUqc7Buwg3A4xlgrl_dtGXh9fDkYanW2DXsuZqN5lAK-B1iLynri7Lg&_nc_zt=23&_nc_ht=scontent.ftgz4-1.fna&_nc_gid=jBmtsL2uMa71tcWbXTsEwQ&_nc_ss=8&oh=00_AfzWL1KK7cAht9IgCJl5SwCA0nVc9YlCx4WbXZQIGJuLkA&oe=69B7B00A" alt="Logo YANDRAMI" class="logo-img">
+            
+            <div class="brand-text">
+                <span class="brand-name">YANDRAMI</span>
+                <span class="brand-slogan">Ferretería & Eléctrica</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Soluciones Industriales</h1>
+        <p>Todo en material eléctrico, herramientas de poder y ferretería en general para tu proyecto o negocio.</p>
+        <a href="#contacto" style="background:#ff6600; color:#000; padding:12px 25px; text-decoration:none; font-weight:bold; border-radius:5px;">COTIZAR AHORA</a>
+    </section>
+
+    <h2 class="section-title">NUESTROS DEPARTAMENTOS</h2>
+    
+    <section class="services">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=500" alt="Material Eléctrico">
+            <div class="card-content">
+                <h3>Material Eléctrico</h3>
+                <p>Cables, interruptores, iluminación LED y centros de carga de alta calidad.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1530124560676-10551d557348?auto=format&fit=crop&w=500" alt="Herramientas">
+            <div class="card-content">
+                <h3>Herramientas de Poder</h3>
+                <p>Taladros, esmeriladoras y sierras de las mejores marcas del mercado.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?auto=format&fit=crop&w=500" alt="Plomería">
+            <div class="card-content">
+                <h3>Ferretería General</h3>
+                <p>Tornillería, adhesivos y todo lo necesario para mantenimiento industrial.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-area">
+        <h2 class="section-title" style="padding-top:0;">CONTACTO Y PEDIDOS</h2>
+        <form action="https://formsubmit.co/TU_CORREO@GMAIL.COM" method="POST">
+            <input type="text" name="Nombre" placeholder="Nombre completo" required>
+            <input type="text" name="Telefono" placeholder="Teléfono de contacto" required>
+            <textarea name="Pedido" rows="4" placeholder="Escribe aquí los materiales que necesitas cotizar..." required></textarea>
+            <button type="submit" class="btn-submit">Enviar Pedido</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 YANDRAMI FERRETERÍA | Calle Principal #123</p>
+        <p>Correo: <a href="mailto:ventas@yandrami.com" style="color:#ff6600;">ventas@yandrami.com</a></p>
+    </footer>
+
+    <a href="https://wa.me/521234567890?text=Hola%20Yandrami,%20necesito%20una%20cotización" class="wa-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20" height="20">
+        WhatsApp Ventas
+    </a>
+
+</body>
+</html>
