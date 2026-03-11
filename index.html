@@ -3,230 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YANDRAMI – Ferretería y Eléctrica</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+    <title>YANDRAMI - Catálogo Industrial 2025</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            font-family: 'Montserrat', sans-serif; 
-            background-color: #0d0d0d; 
-            color: #fff; 
-            scroll-behavior: smooth; 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        /* Cabecera - Ajustada a BLANCO para resaltar el logo */
-        header {
-            background: #ffffff;
-            padding: 10px 5%;
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        /* Header con los colores de YANDRAMI */
+        .header {
+            background: #ff6b00;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        /* Barra de información del catálogo */
+        .catalog-info {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            border-bottom: 3px solid #ff6b00;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 4px solid #ff6600;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        /* Contenedor del Logo y Texto */
-        .header-brand {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-img {
-            height: 70px; /* Altura del logo */
-            width: auto;
-        }
-
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand-name {
-            color: #000000;
-            font-weight: 700;
-            font-size: 28px;
-            letter-spacing: 1px;
-            line-height: 1.2;
-        }
-
-        .brand-slogan {
-            color: #ff6600;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* Banner Principal */
-        .hero {
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .hero h1 { font-size: 3.5rem; color: #ff6600; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 25px; }
-
-        /* Secciones */
-        .section-title { text-align: center; padding: 40px 0 20px; color: #ff6600; font-size: 2rem; }
-
-        /* Categorías / Galería */
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .card {
-            background: #1a1a1a;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid #333;
-            transition: 0.3s;
-        }
-
-        .card:hover { border-color: #ff6600; transform: translateY(-5px); }
-
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-
-        .card-content { padding: 20px; }
-        .card-content h3 { color: #ff6600; margin-bottom: 10px; }
-        .card-content p { font-size: 0.9rem; color: #ccc; }
-
-        /* Formulario */
-        .contact-area { background: #000; padding: 60px 20px; }
-        form {
-            max-width: 500px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        input, textarea {
-            padding: 15px;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            color: #fff;
-            border-radius: 5px;
-            outline: none;
-        }
-
-        input:focus { border-color: #ff6600; }
-
-        .btn-submit {
-            padding: 15px;
-            background: #ff6600;
-            color: #000;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            text-transform: uppercase;
-        }
-
-        /* WhatsApp */
-        .wa-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25d366;
-            color: #fff;
-            padding: 15px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
+        
+        .info-item {
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            z-index: 1000;
+            color: #555;
         }
-
-        footer { padding: 40px; text-align: center; background: #000; border-top: 1px solid #222; }
+        
+        .info-item i {
+            color: #ff6b00;
+            font-size: 1.2em;
+        }
+        
+        .badge {
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        /* Visor de PDF */
+        .pdf-container {
+            padding: 20px;
+            background: #e9ecef;
+        }
+        
+        .pdf-viewer {
+            width: 100%;
+            height: 800px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Nota importante estilo Truper */
+        .notice {
+            background: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        
+        .notice p {
+            margin: 5px 0;
+            color: #856404;
+        }
+        
+        .notice i {
+            margin-right: 10px;
+        }
+        
+        /* Botones de acción */
+        .actions {
+            padding: 20px;
+            text-align: center;
+            background: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            margin: 0 10px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background: #ff6b00;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .catalog-info {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .pdf-viewer {
+                height: 500px;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+        }
     </style>
 </head>
 <body>
-
-    <header>
-        <div class="header-brand">
-            <img src="https://scontent.ftgz4-1.fna.fbcdn.net/v/t39.30808-6/557604704_122109886022998690_8891380271883580342_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=0b4Su-jqJQMQ7kNvwHRbfpB&_nc_oc=AdkZ7TbUfMixNUqc7Buwg3A4xlgrl_dtGXh9fDkYanW2DXsuZqN5lAK-B1iLynri7Lg&_nc_zt=23&_nc_ht=scontent.ftgz4-1.fna&_nc_gid=jBmtsL2uMa71tcWbXTsEwQ&_nc_ss=8&oh=00_AfzWL1KK7cAht9IgCJl5SwCA0nVc9YlCx4WbXZQIGJuLkA&oe=69B7B00A" alt="Logo YANDRAMI" class="logo-img">
-            
-            <div class="brand-text">
-                <span class="brand-name">YANDRAMI</span>
-                <span class="brand-slogan">Ferretería & Eléctrica</span>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🔧 YANDRAMI Ferretería & Eléctrica</h1>
+            <p>Soluciones Industriales para tu proyecto o negocio</p>
+        </div>
+        
+        <!-- Información del catálogo (estilo Truper) -->
+        <div class="catalog-info">
+            <div class="info-item">
+                <span>📅</span>
+                <span><strong>Última actualización:</strong> 15 de Marzo 2026</span>
+            </div>
+            <div class="info-item">
+                <span>📊</span>
+                <span><strong>Tamaño:</strong> 8.5 MB</span>
+            </div>
+            <div class="badge">
+                ⭐ Catálogo 2026
             </div>
         </div>
-    </header>
-
-    <section class="hero">
-        <h1>Soluciones Industriales</h1>
-        <p>Todo en material eléctrico, herramientas de poder y ferretería en general para tu proyecto o negocio.</p>
-        <a href="#contacto" style="background:#ff6600; color:#000; padding:12px 25px; text-decoration:none; font-weight:bold; border-radius:5px;">COTIZAR AHORA</a>
-    </section>
-
-    <h2 class="section-title">NUESTROS DEPARTAMENTOS</h2>
+        
+        <!-- Nota importante (como en Truper) -->
+        <div class="notice">
+            <p><i>📘</i> <strong>Para una mejor experiencia:</strong></p>
+            <p>• El visor puede tardar unos segundos en cargar dependiendo de tu conexión.</p>
+            <p>• Usa los controles del visor para navegar, hacer zoom o buscar productos.</p>
+            <p>• Si el visor no funciona, usa el botón de descarga directa.</p>
+        </div>
+        
+        <!-- Visor de PDF -->
+        <div class="pdf-container">
+            <!-- IMPORTANTE: Reemplaza 'catalogo/catalogo-yandrami-2025.pdf' con la ruta correcta de tu PDF -->
+            <iframe 
+                src="catalogo/catalogo-yandrami-2025.pdf"
+                class="pdf-viewer"
+                title="Catálogo Yandrami 2025">
+            </iframe>
+        </div>
+        
+        <!-- Botones de acción -->
+        <div class="actions">
+            <a href="catalogo/catalogo-yandrami-2025.pdf" download class="btn btn-primary">
+                📥 DESCARGAR CATÁLOGO PDF
+            </a>
+            <a href="#" class="btn btn-secondary" onclick="window.location.reload();">
+                🔄 ACTUALIZAR VISOR
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>📍 Visítanos: [Tu dirección] | 📞 Tel: [Tu teléfono] | ✉️ Email: [Tu email]</p>
+            <p>© 2026 YANDRAMI - Todos los derechos reservados</p>
+        </div>
+    </div>
     
-    <section class="services">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=500" alt="Material Eléctrico">
-            <div class="card-content">
-                <h3>Material Eléctrico</h3>
-                <p>Cables, interruptores, iluminación LED y centros de carga de alta calidad.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1530124560676-10551d557348?auto=format&fit=crop&w=500" alt="Herramientas">
-            <div class="card-content">
-                <h3>Herramientas de Poder</h3>
-                <p>Taladros, esmeriladoras y sierras de las mejores marcas del mercado.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?auto=format&fit=crop&w=500" alt="Plomería">
-            <div class="card-content">
-                <h3>Ferretería General</h3>
-                <p>Tornillería, adhesivos y todo lo necesario para mantenimiento industrial.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="contact-area">
-        <h2 class="section-title" style="padding-top:0;">CONTACTO Y PEDIDOS</h2>
-        <form action="https://formsubmit.co/TU_CORREO@GMAIL.COM" method="POST">
-            <input type="text" name="Nombre" placeholder="Nombre completo" required>
-            <input type="text" name="Telefono" placeholder="Teléfono de contacto" required>
-            <textarea name="Pedido" rows="4" placeholder="Escribe aquí los materiales que necesitas cotizar..." required></textarea>
-            <button type="submit" class="btn-submit">Enviar Pedido</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>© 2026 YANDRAMI FERRETERÍA | Calle Principal #123</p>
-        <p>Correo: <a href="mailto:ventas@yandrami.com" style="color:#ff6600;">ventas@yandrami.com</a></p>
-    </footer>
-
-    <a href="https://wa.me/521234567890?text=Hola%20Yandrami,%20necesito%20una%20cotización" class="wa-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20" height="20">
-        WhatsApp Ventas
-    </a>
-
+    <script>
+        // Script para manejar errores de carga del PDF
+        document.addEventListener('DOMContentLoaded', function() {
+            const pdfViewer = document.querySelector('.pdf-viewer');
+            
+            pdfViewer.addEventListener('error', function() {
+                const notice = document.querySelector('.notice');
+                notice.innerHTML += '<p style="color: #dc3545; margin-top: 10px;">⚠️ Error al cargar el visor. Puedes descargar el PDF directamente usando el botón de abajo.</p>';
+            });
+        });
+    </script>
 </body>
 </html>
