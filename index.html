@@ -3,247 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YANDRAMI - Catálogo Industrial 2025</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-        
-        /* Header con los colores de YANDRAMI */
-        .header {
-            background: #ff6b00;
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.95;
-        }
-        
-        /* Barra de información del catálogo */
-        .catalog-info {
-            background: #f8f9fa;
-            padding: 20px 30px;
-            border-bottom: 3px solid #ff6b00;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #555;
-        }
-        
-        .info-item i {
-            color: #ff6b00;
-            font-size: 1.2em;
-        }
-        
-        .badge {
-            background: #28a745;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: bold;
-        }
-        
-        /* Visor de PDF */
-        .pdf-container {
-            padding: 20px;
-            background: #e9ecef;
-        }
-        
-        .pdf-viewer {
-            width: 100%;
-            height: 800px;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        /* Nota importante estilo Truper */
-        .notice {
-            background: #fff3cd;
-            border-left: 6px solid #ffc107;
-            padding: 15px 20px;
-            margin: 20px;
-            border-radius: 5px;
-        }
-        
-        .notice p {
-            margin: 5px 0;
-            color: #856404;
-        }
-        
-        .notice i {
-            margin-right: 10px;
-        }
-        
-        /* Botones de acción */
-        .actions {
-            padding: 20px;
-            text-align: center;
-            background: #f8f9fa;
-            border-top: 1px solid #dee2e6;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            margin: 0 10px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .btn-primary {
-            background: #ff6b00;
-            color: white;
-        }
-        
-        .btn-secondary {
-            background: #6c757d;
-            color: white;
-        }
-        
-        /* Footer */
-        .footer {
-            background: #343a40;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-            
-            .catalog-info {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-            
-            .pdf-viewer {
-                height: 500px;
-            }
-            
-            .btn {
-                display: block;
-                margin: 10px auto;
-                width: 80%;
-            }
-        }
-    </style>
+    <title>YANDRAMI - Tienda Online</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>🔧 YANDRAMI Ferretería & Eléctrica</h1>
-            <p>Soluciones Industriales para tu proyecto o negocio</p>
-        </div>
-        
-        <!-- Información del catálogo (estilo Truper) -->
-        <div class="catalog-info">
-            <div class="info-item">
-                <span>📅</span>
-                <span><strong>Última actualización:</strong> 15 de Marzo 2026</span>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="https://github.com/YANDRAMI/-YANDRAMI-/blob/main/logo_principal.jpg?raw=true" alt="YANDRAMI Logo">
+                    <span class="logo-text">YANDRAMI FERRE- ELECTRICA</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#catalogo">CATÁLOGO</a></li>
+                    <li><a href="#productos">PRODUCTOS</a></li>
+                    <li><a href="#categorias">CATEGORÍAS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar productos...">
+                    <button>🔍</button>
+                </div>
+                <div class="cart-icon">🛒</div>
             </div>
-            <div class="info-item">
-                <span>📊</span>
-                <span><strong>Tamaño:</strong> 8.5 MB</span>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>BIENVENIDO A YANDRAMI</h1>
+            <p>Los mejores productos de calidad para tu hogar y negocio</p>
+            <button class="btn-primary">⭐ COMPRA AHORA</button>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section id="categorias" class="categories">
+        <div class="container">
+            <h2>CATEGORÍAS PRINCIPALES</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">🔧</div>
+                    <h3>Herramientas</h3>
+                    <p style="font-size: 12px; color: #999; margin-top: 8px;">Calidad Premium</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🛠️</div>
+                    <h3>Equipos</h3>
+                    <p style="font-size: 12px; color: #999; margin-top: 8px;">Profesionales</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">⚙️</div>
+                    <h3>Accesorios</h3>
+                    <p style="font-size: 12px; color: #999; margin-top: 8px;">Variados</p>
+                </div>
+                <div class="category-card truper-category">
+                    <div class="category-icon">🏭</div>
+                    <h3>TRUPER</h3>
+                    <p class="truper-subtitle">Catálogo Oficial</p>
+                </div>
             </div>
-            <div class="badge">
-                ⭐ Catálogo 2026
+        </div>
+    </section>
+
+    <!-- Catálogo simple de imágenes con URL, nombre y código -->
+    <section id="catalogo" class="catalogo-animado">
+        <div class="container">
+            <h2>CATÁLOGO YANDRAMI</h2>
+            <div class="catalogo-grid">
+                <div class="catalogo-card">
+                    <img src="https://raw.githubusercontent.com/YANDRAMI/-YANDRAMI-/main/your-image-1.jpg" alt="Taladro Profesional">
+                    <h3>Taladro Profesional</h3>
+                    <p>Código: TP-001</p>
+                    <p class="catalogo-url">URL: https://raw.githubusercontent.com/YANDRAMI/-YANDRAMI-/main/your-image-1.jpg</p>
+                </div>
+                <div class="catalogo-card">
+                    <img src="https://raw.githubusercontent.com/YANDRAMI/-YANDRAMI-/main/your-image-2.jpg" alt="Sierra Circular">
+                    <h3>Sierra Circular</h3>
+                    <p>Código: SC-002</p>
+                    <p class="catalogo-url">URL: https://raw.githubusercontent.com/YANDRAMI/-YANDRAMI-/main/your-image-2.jpg</p>
+                </div>
+                <div class="catalogo-card">
+                    <img src="https://raw.githubusercontent.com/YANDRAMI/-YANDRAMI-/main/your-image-3.jpg" alt="Martillo TRUPER">
+                    <h3>Martillo TRUPER</h3>
+                    <p>Código: MT-003</p>
+                    <p class="catalogo-url">URL: https://raw.githubusercontent.com/YANDRAMI/-YANDRAMI-/main/your-image-3.jpg</p>
+                </div>
+                <div class="catalogo-card">
+                    <img src="https://raw.githubusercontent.com/YANDRAMI/-YANDRAMI-/main/your-image-4.jpg" alt="Cortadora TRUPER">
+                    <h3>Cortadora TRUPER</h3>
+                    <p>Código: CT-004</p>
+                    <p class="catalogo-url">URL: https://raw.githubusercontent.com/YANDRAMI/-YANDRAMI-/main/your-image-4.jpg</p>
+                </div>
             </div>
         </div>
-        
-        <!-- Nota importante (como en Truper) -->
-        <div class="notice">
-            <p><i>📘</i> <strong>Para una mejor experiencia:</strong></p>
-            <p>• El visor puede tardar unos segundos en cargar dependiendo de tu conexión.</p>
-            <p>• Usa los controles del visor para navegar, hacer zoom o buscar productos.</p>
-            <p>• Si el visor no funciona, usa el botón de descarga directa.</p>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section id="productos" class="products">
+        <div class="container">
+            <h2>PRODUCTOS DESTACADOS</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">Herramientas</button>
+                <button class="filter-btn">Equipos</button>
+                <button class="filter-btn">Accesorios</button>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23FF8C00' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%23fff' font-weight='bold'%3EProducto 1%3C/text%3E%3C/svg%3E" alt="Producto 1">
+                    </div>
+                    <h3>Taladro Profesional</h3>
+                    <p class="price">$1,299.00</p>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23FF8C00' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%23fff' font-weight='bold'%3EProducto 2%3C/text%3E%3C/svg%3E" alt="Producto 2">
+                    </div>
+                    <h3>Sierra Circular</h3>
+                    <p class="price">$899.00</p>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23FF8C00' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%23fff' font-weight='bold'%3EProducto 3%3C/text%3E%3C/svg%3E" alt="Producto 3">
+                    </div>
+                    <h3>Martillo Profesional</h3>
+                    <p class="price">$249.00</p>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23FF8C00' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%23fff' font-weight='bold'%3EProducto 4%3C/text%3E%3C/svg%3E" alt="Producto 4">
+                    </div>
+                    <h3>Juego de Destornilladores</h3>
+                    <p class="price">$349.00</p>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23FF8C00' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%23fff' font-weight='bold'%3EProducto 5%3C/text%3E%3C/svg%3E" alt="Producto 5">
+                    </div>
+                    <h3>Nivel Láser</h3>
+                    <p class="price">$799.00</p>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23FF8C00' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%23fff' font-weight='bold'%3EProducto 6%3C/text%3E%3C/svg%3E" alt="Producto 6">
+                    </div>
+                    <h3>Caja de Herramientas</h3>
+                    <p class="price">$599.00</p>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23FF8C00' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%23fff' font-weight='bold'%3EProducto 7%3C/text%3E%3C/svg%3E" alt="Producto 7">
+                    </div>
+                    <h3>Llave Inglesa</h3>
+                    <p class="price">$199.00</p>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23FF8C00' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%23fff' font-weight='bold'%3EProducto 8%3C/text%3E%3C/svg%3E" alt="Producto 8">
+                    </div>
+                    <h3>Brocas de Acero</h3>
+                    <p class="price">$149.00</p>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </div>
+
+                <div class="product-card truper-product">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%230066cc' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='%23fff' font-weight='bold'%3ETRUPER%3C/text%3E%3C/svg%3E" alt="Alicates Truper">
+                    </div>
+                    <h3>Alicates TRUPER</h3>
+                    <p class="price">$89.00</p>
+                    <button class="btn-secondary" onclick="viewInTruperCatalog('Alicates TRUPER')">Ver en catálogo</button>
+                </div>
+
+                <div class="product-card truper-product">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%230066cc' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='%23fff' font-weight='bold'%ETRUPER%3C/text%3E%3C/svg%3E" alt="Llave Inglesa Truper">
+                    </div>
+                    <h3>Llave Inglesa TRUPER</h3>
+                    <p class="price">$145.00</p>
+                    <button class="btn-secondary" onclick="viewInTruperCatalog('Llave Inglesa TRUPER')">Ver en catálogo</button>
+                </div>
+
+                <div class="product-card truper-product">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%230066cc' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='%23fff' font-weight='bold'%ETRUPER%3C/text%3E%3C/svg%3E" alt="Martillo Truper">
+                    </div>
+                    <h3>Martillo TRUPER</h3>
+                    <p class="price">$125.00</p>
+                    <button class="btn-secondary" onclick="viewInTruperCatalog('Martillo TRUPER')">Ver en catálogo</button>
+                </div>
+
+                <div class="product-card truper-product">
+                    <div class="product-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='%23fff' font-weight='bold'%ETRUPER%3C/text%3E%3C/svg%3E" alt="Destornilladores Truper">
+                    </div>
+                    <h3>Juego Destornilladores TRUPER</h3>
+                    <p class="price">$199.00</p>
+                    <button class="btn-secondary" onclick="viewInTruperCatalog('Juego Destornilladores TRUPER')">Ver en catálogo</button>
+                </div>
+            </div>
         </div>
-        
-        <!-- Visor de PDF -->
-        <div class="pdf-container">
-            <!-- IMPORTANTE: Reemplaza 'catalogo/catalogo-yandrami-2025.pdf' con la ruta correcta de tu PDF -->
-            <iframe 
-                src="catalogo/catalogo-yandrami-2025.pdf"
-                class="pdf-viewer"
-                title="Catálogo Yandrami 2025">
-            </iframe>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>CONTÁCTANOS</h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3>📍 Ubicación</h3>
+                    <p>Periferico Norte No. 78, Col. Benito Juárez<br>San Cristobal De Las Casas; Chiapas</p>
+                </div>
+                <div class="contact-card">
+                    <h3>📞 Teléfono</h3>
+                    <p>(52) 9671680175<br>
+                </div>
+                <div class="contact-card">
+                    <h3>📧 Email</h3>
+                    <p> <br>
+                </div>
+            </div>
         </div>
-        
-        <!-- Botones de acción -->
-        <div class="actions">
-            <a href="catalogo/catalogo-yandrami-2025.pdf" download class="btn btn-primary">
-                📥 DESCARGAR CATÁLOGO PDF
-            </a>
-            <a href="#" class="btn btn-secondary" onclick="window.location.reload();">
-                🔄 ACTUALIZAR VISOR
-            </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>YANDRAMI</h4>
+                    <ul>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Términos de servicio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CATEGORÍAS</h4>
+                    <ul>
+                        <li><a href="#">Herramientas</a></li>
+                        <li><a href="#">Equipos</a></li>
+                        <li><a href="#">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CATÁLOGOS</h4>
+                    <ul>
+                        <li><a href="https://www.truper.com/CatVigente/" target="_blank">TRUPER Oficial</a></li>
+                        <li><a href="#">Nuestros Productos</a></li>
+                        <li><a href="#">Lista de Precios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 YANDRAMI. Todos los derechos reservados.</p>
+            </div>
         </div>
-        
-        <!-- Footer -->
-        <div class="footer">
-            <p>📍 Visítanos: [Tu dirección] | 📞 Tel: [Tu teléfono] | ✉️ Email: [Tu email]</p>
-            <p>© 2026 YANDRAMI - Todos los derechos reservados</p>
-        </div>
-    </div>
-    
+    </footer>
+
+    <script src="script.js"></script>
     <script>
-        // Script para manejar errores de carga del PDF
-        document.addEventListener('DOMContentLoaded', function() {
-            const pdfViewer = document.querySelector('.pdf-viewer');
-            
-            pdfViewer.addEventListener('error', function() {
-                const notice = document.querySelector('.notice');
-                notice.innerHTML += '<p style="color: #dc3545; margin-top: 10px;">⚠️ Error al cargar el visor. Puedes descargar el PDF directamente usando el botón de abajo.</p>';
-            });
-        });
+        // Configuración de Google Apps Script
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/TU_SCRIPT_ID/exec';
+
+        // Cargar productos desde Google Sheets cuando carga la página
+        document.addEventListener('DOMContentLoaded', loadProductsFromSheets);
     </script>
 </body>
 </html>
